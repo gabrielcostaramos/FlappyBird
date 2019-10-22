@@ -133,7 +133,7 @@ function estaoSobrepostos(elementoA, elementoB){
     return horizontal && vertical
 }
 
-function colidiu(passaro, barreiras) {
+function colidir(passaro, barreiras) {
     let colidiu = false
     barreiras.pares.forEach(ParDeBarreiras => {
         if(!colidiu) {
@@ -143,7 +143,7 @@ function colidiu(passaro, barreiras) {
                 || estaoSobrepostos(passaro.elemento, inferior)
         }
     })
-    return colidiu
+    return colidir
 }
 
 function FlappyBird() {
@@ -168,7 +168,7 @@ function FlappyBird() {
                 barreiras.animar()
                 passaro.animar()
 
-                if(colidiu(passaro, barreiras)) {
+                if(colidir(passaro, barreiras)) {
                     clearInterval(temporizador)
                 }
             }, 20)
