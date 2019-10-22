@@ -134,9 +134,9 @@ function estaoSobrepostos(elementoA, elementoB){
 }
 
 function colidir(passaro, barreiras) {
-    let colidiu = false
+    let colidir = false
     barreiras.pares.forEach(ParDeBarreiras => {
-        if(!colidiu) {
+        if(!colidir) {
             const superior = ParDeBarreiras.superior.elemento
             const inferior = ParDeBarreiras.inferior.elemento
             colidiu = estaoSobrepostos(passaro.elemento, superior)
